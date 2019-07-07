@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { TestComponent } from './test/test.component';
+import { AdditonalComponent } from './additonal/additonal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CockpitComponent,
     ServerElementComponent,
-    TestComponent
+    TestComponent,
+    AdditonalComponent
   ],
   imports: [
     BrowserModule,
