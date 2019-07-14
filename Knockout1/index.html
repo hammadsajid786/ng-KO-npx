@@ -2,7 +2,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
+    <script src="lib-references/knockout-3.5.0.js"></script>
     <style>
 
     </style>
@@ -22,7 +22,6 @@
     function AppViewModel() {
         this.firstName = ko.observable("Bert");
         this.lastName = ko.observable("Beriton");
-
     }
 
     ko.applyBindings(new AppViewModel());
