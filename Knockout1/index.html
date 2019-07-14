@@ -14,14 +14,24 @@
 
     <br>
 
-    <strong data-bind="text: firstName"></strong>
-    <strong data-bind="text: lastName"></strong>
+    <strong data-bind="text: fullName"></strong>
+
+    <button data-bind="click: capitalizeLastName">Do Caps</button>
 </body>
 
 <script>
     function AppViewModel() {
         this.firstName = ko.observable("Bert");
         this.lastName = ko.observable("Beriton");
+
+        this.fullName = ko.computed(function () {
+            return this.firstName() + ' ' + this.lastName();
+        }, this);
+
+        this.capitalizeLastName = function () {
+            this.lastName(this.lastName().toUpperCase());
+        }
+
     }
 
     ko.applyBindings(new AppViewModel());
