@@ -9,9 +9,16 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 export class ServerElementComponent implements OnInit {
 
   @Input('srvElement') element: { type: string, name: string, content: string };
-  constructor() { }
+  constructor() {
+    console.log('constructor called');
+  }
 
   ngOnInit() {
+    console.log('ngOnInit called');
+  }
+
+  ngOnChanges() {
+    console.log('ngOnChanges called');
   }
 
 }
