@@ -26,8 +26,4 @@ export class AppComponent {
       content: serverData.serverContent
     });
   }
-
-  onChangeFirst() {
-
-  }
 }
