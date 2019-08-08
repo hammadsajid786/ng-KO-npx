@@ -21,9 +21,39 @@
             </tr>
         </tbody>
     </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: people">
+            <tr>
+                <td data-bind="text: firstName"></td>
+                <td data-bind="text: lastName"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 <script>
     //Trying to manipulate Datatables with knockout Framwork
+</script>
+
+<script>
+    ko.applyBindings({
+        people: [{
+            firstName: 'Bert',
+            lastName: 'Bertington'
+        }, {
+            firstName: 'Charles',
+            lastName: 'Charlesforth'
+        }, {
+            firstName: 'Denise',
+            lastName: 'Dentiste'
+        }]
+    });
 </script>
 
 </html>
