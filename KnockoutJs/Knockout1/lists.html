@@ -36,6 +36,22 @@
             </tr>
         </tbody>
     </table>
+    <br>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Surname</td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: tempPeople">
+            <tr>
+                <td data-bind="text: firstName"></td>
+                <td data-bind="text: surName"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 <script>
     //Trying to manipulate Datatables with knockout Framwork
@@ -52,6 +68,13 @@
         }, {
             firstName: 'Denise',
             lastName: 'Dentiste'
+        }],
+        tempPeople: [{
+            firstName: 'Alpha',
+            surName: 'Akram'
+        }, {
+            firstName: 'Beta',
+            surName: 'Gama'
         }]
     });
 </script>
