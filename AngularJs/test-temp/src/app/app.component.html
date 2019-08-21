@@ -30,5 +30,11 @@
             <p appBasicHighlight>Style me with basic Directive</p>
             <p [appBetterHighlight]="'red'" defaultColor="yellow">Style me with better Directive</p>
         </div>
+        <div [ngSwitch]="value">
+            <p *ngSwitchCase="10">Value is 10</p>
+            <p *ngSwitchCase="2">Value is 2</p>
+            <p *ngSwitchCase="3">Value is 3</p>
+            <p *ngSwitchDefault>Default Value selected</p>
+        </div>
     </div>
 </div>
