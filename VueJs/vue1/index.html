@@ -8,14 +8,18 @@
 
 <body>
     <div id="app">
-        {{ message }}
+        <h1>
+            {{product}}
+        </h1>
+        <p>{{productDetails}}</p>
     </div>
 
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!'
+                product: 'Socks',
+                productDetails: 'This product is used for winter only'
             }
         })
     </script>
