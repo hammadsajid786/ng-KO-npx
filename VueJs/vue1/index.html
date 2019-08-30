@@ -14,7 +14,7 @@
         <p>{{productDetails}}</p>
         <img :src="imagePath" :alt="altImage">
         <a :href="hyperlinkRef">index2.html</a>
-
+        <p>Product State: <span v-show="onSale">On Sale</span></p>
     </div>
 
     <script>
@@ -25,7 +25,9 @@
                 productDetails: 'This product is used for winter only',
                 imagePath: 'https://www.w3schools.com/images/picture.jpg',
                 altImage: 'Mountain',
-                hyperlinkRef: 'https://www.google.com/'
+                hyperlinkRef: 'https://www.google.com/',
+
+                onSale: true
             }
         })
     </script>
