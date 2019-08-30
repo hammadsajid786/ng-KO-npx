@@ -12,6 +12,9 @@
             {{product}}
         </h1>
         <p>{{productDetails}}</p>
+        <img v-bind:src="imagePath" alt="Mountain">
+
+
     </div>
 
     <script>
@@ -19,7 +22,8 @@
             el: '#app',
             data: {
                 product: 'Socks',
-                productDetails: 'This product is used for winter only'
+                productDetails: 'This product is used for winter only',
+                imagePath: 'https://www.w3schools.com/images/picture.jpg'
             }
         })
     </script>
