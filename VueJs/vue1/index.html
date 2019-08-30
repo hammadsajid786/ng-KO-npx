@@ -12,8 +12,8 @@
             {{product}}
         </h1>
         <p>{{productDetails}}</p>
-        <img v-bind:src="imagePath" alt="Mountain">
-
+        <img :src="imagePath" :alt="altImage">
+        <a :href="hyperlinkRef">index2.html</a>
 
     </div>
 
@@ -23,7 +23,9 @@
             data: {
                 product: 'Socks',
                 productDetails: 'This product is used for winter only',
-                imagePath: 'https://www.w3schools.com/images/picture.jpg'
+                imagePath: 'https://www.w3schools.com/images/picture.jpg',
+                altImage: 'Mountain',
+                hyperlinkRef: 'https://www.google.com/'
             }
         })
     </script>
