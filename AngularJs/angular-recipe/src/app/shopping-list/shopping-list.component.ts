@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Ingredient } from '../shared/ingredient.model';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-shopping-list',
@@ -19,7 +20,23 @@ export class ShoppingListComponent implements OnInit {
   }
 
   onIngredientAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
+    if (this.ingredientsInputValidation(ingredient)) {
+      this.ingredients.push(ingredient);
+    }
+  }
+
+  ingredientsInputValidation(ingredient: Ingredient) {
+    if (ingredient.name == '') {
+      alert('Name required');
+      return false;
+    }
+
+    if(ingredient.amount<=0){
+      alert ('Amount must be > 0 ');
+      return false;
+    }
+
+    return true;
   }
 
 }
