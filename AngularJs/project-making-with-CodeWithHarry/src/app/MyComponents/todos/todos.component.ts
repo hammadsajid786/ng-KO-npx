@@ -23,14 +23,14 @@ export class TodosComponent implements OnInit {
         title: "This is 2nd title",
         desc: "Description",
         active: true
-      }, ,
+      },
       {
         sno: 3,
         title: "This is 3rd title",
         desc: "Description",
         active: true
       }
-    ]
+    ];
   }
 
   ngOnInit(): void {
